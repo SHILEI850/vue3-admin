@@ -49,7 +49,7 @@ const state = reactive({
 const submitForm = async () => {
   loginForm.value.validate((valid) => {
     if (valid) {
-      axios.post('/adminUser/login', {
+      axios.post('/users/admin/login', {
         userName: state.ruleForm.username || '',
         passwordMd5: md5(state.ruleForm.password)
       }).then(res => {
